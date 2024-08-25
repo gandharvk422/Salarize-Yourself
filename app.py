@@ -4,7 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-from streamlit import snow
 
 st.set_page_config(page_title="Salarize Yourself - Predict Your Own Salary", page_icon="💸")
 
