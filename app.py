@@ -13,8 +13,8 @@ y = dataset.iloc[:, -1]
 X_values = X.values
 y_values = y.values
 
-st.header("Salarize Yourself")
-st.write("# Predict Your Own Salary")
+st.title("Salarize Yourself")
+st.header("Predict Your Own Salary")
 
 col1, col2, col3 =  st.columns(3)
 
@@ -81,27 +81,32 @@ def test_results_visualize(X_test, y_test):
 
 test_results_visualize(X_test, y_test)
 
-testing = st.sidebar.slider(label="Years of Experience", min_value=0, max_value=100)
+st.sidebar.title("Years of Experience")
+testing = st.sidebar.slider(label = "What's your years of experience?", min_value=0, max_value=100)
 
 def predict(testing):
-    st.sidebar.write("# Single Predicted Salary")
+    st.sidebar.title("Your Predicted Salary")
     y_pred = training(X_values, y_values).predict([[testing]])
-    return st.sidebar.markdown(y_pred[0])
+    return st.sidebar.markdown(f"#### _Rs. {round(y_pred[0], 2)} per month_")
 
 predict(testing)
 
+st.sidebar.divider()
+
 def coefficients():
-    st.sidebar.write("# Coefficient")
+    st.sidebar.markdown("## Coefficient")
     st.sidebar.markdown(reg.coef_[0])
 
 coefficients()
 
 def intercept():
-    st.sidebar.write("# Intercept")
+    st.sidebar.markdown("## Intercept")
     st.sidebar.markdown(reg.intercept_)
 
 intercept()
 
-st.markdown("# Created by [Gandharv Kulkarni]('https://share.streamlit.io/user/gandharvk422)")
+st.divider()
 
-st.markdown("[![GitHub](https://img.shields.io/badge/GitHub-100000?style=the-badge&logo=github&logoColor=white&logoBackground=white)](https://github.com/gandharvk422) &emsp; [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/gandharvk422) &emsp; [![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=the-badge&logo=Kaggle&logoColor=white)](https://www.kaggle.com/gandharvk422)")
+st.markdown("##### &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Created by [Gandharv Kulkarni]('https://share.streamlit.io/user/gandharvk422')")
+
+st.markdown("&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[![GitHub](https://img.shields.io/badge/GitHub-100000?style=the-badge&logo=github&logoColor=white&logoBackground=white)](https://github.com/gandharvk422) &emsp; [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/gandharvk422) &emsp; [![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=the-badge&logo=Kaggle&logoColor=white)](https://www.kaggle.com/gandharvk422)")
