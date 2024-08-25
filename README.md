@@ -1,4 +1,4 @@
-# Salarize Yourself - Salary Prediction using Linear Regression
+# Salarize Yourself - Predict Your Own Salary
 
 Launch the web app:
 
