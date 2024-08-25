@@ -102,7 +102,6 @@ def intercept():
 
 intercept()
 
-st.html("<br><br><br>")
-st.html("<footer style='padding: 0px; margin: 0px;'>Created by <a href='https://share.streamlit.io/user/gandharvk422'>Gandharv Kulkarni</a></footer>")
+st.markdown("# Created by [Gandharv Kulkarni]('https://share.streamlit.io/user/gandharvk422)")
 
 st.markdown("[![GitHub](https://img.shields.io/badge/GitHub-100000?style=the-badge&logo=github&logoColor=white&logoBackground=white)](https://github.com/gandharvk422) &emsp; [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/gandharvk422) &emsp; [![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=the-badge&logo=Kaggle&logoColor=white)](https://www.kaggle.com/gandharvk422)")
