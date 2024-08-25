@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
-st.set_page_config(page_title="Salarize Yourself - Predict Your Own Salary", page_icon="💸")
+st.set_page_config(page_title="Salarize Yourself - Predict Your Own Salary", page_icon="💵")
 
 dataset = pd.read_csv("Salary_Data.csv")
 X = dataset.iloc[:, :-1]
@@ -91,7 +91,7 @@ def predict(testing):
 
 predict(testing)
 
-st.sidebar.divider()
+st.sidebar.write("---")
 
 def coefficients():
     st.sidebar.markdown("## Coefficient")
@@ -105,7 +105,7 @@ def intercept():
 
 intercept()
 
-st.divider()
+st.write("---")
 
 st.markdown("##### &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Created by [Gandharv Kulkarni]('https://share.streamlit.io/user/gandharvk422')")
 
