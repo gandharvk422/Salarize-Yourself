@@ -15,7 +15,7 @@ X_values = X.values
 y_values = y.values
 
 st.header("Salarize Yourself")
-st.write("# Salary Prediction using Linear Regression")
+st.write("# Predict Your Own Salary")
 
 col1, col2, col3 =  st.columns(3)
 
