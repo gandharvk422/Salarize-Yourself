@@ -95,13 +95,13 @@ st.sidebar.write("---")
 
 def coefficients():
     st.sidebar.markdown("## Coefficient")
-    st.sidebar.markdown(reg.coef_[0])
+    st.sidebar.markdown(f"{reg.coef_[0]:.2f}")
 
 coefficients()
 
 def intercept():
     st.sidebar.markdown("## Intercept")
-    st.sidebar.markdown(reg.intercept_)
+    st.sidebar.markdown(f"{reg.intercept_:.2f}")
 
 intercept()
 
@@ -110,3 +110,12 @@ st.write("---")
 st.markdown("##### &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Created by [Gandharv Kulkarni](https://share.streamlit.io/user/gandharvk422)")
 
 st.markdown("&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[![GitHub](https://img.shields.io/badge/GitHub-100000?style=the-badge&logo=github&logoColor=white&logoBackground=white)](https://github.com/gandharvk422) &emsp; [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/gandharvk422) &emsp; [![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=the-badge&logo=Kaggle&logoColor=white)](https://www.kaggle.com/gandharvk422)")
+
+from sklearn.metrics import r2_score
+
+# Calculate R-squared score
+r2 = r2_score(y_test, reg.predict(X_test))
+
+# Display R-squared score in Streamlit
+st.sidebar.markdown("## Model Performance")
+st.sidebar.markdown(f"Performance: **_{r2*100:.2f}%_**")
