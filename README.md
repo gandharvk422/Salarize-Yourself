@@ -1,4 +1,5 @@
 # Salarize Yourself
+## Predict Your Own Salary
 
 Launch the web app:
 
